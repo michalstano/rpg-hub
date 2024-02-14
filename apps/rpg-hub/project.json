@@ -1,0 +1,66 @@
+{
+  "name": "rpg-hub",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "rh",
+  "sourceRoot": "apps/rpg-hub/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/rpg-hub",
+        "index": "apps/rpg-hub/src/index.html",
+        "browser": "apps/rpg-hub/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/rpg-hub/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/rpg-hub/src/favicon.ico", "apps/rpg-hub/src/assets"],
+        "styles": ["apps/rpg-hub/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "rpg-hub:build:production"
+        },
+        "development": {
+          "buildTarget": "rpg-hub:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "rpg-hub:build"
+      }
+    }
+  }
+}
