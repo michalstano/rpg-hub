@@ -1,0 +1,9 @@
+{
+  "name": "feature-camera",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/rpg-hub/feature-camera/src",
+  "prefix": "rpg-hub",
+  "tags": ["scope:rpg-hub", "type:feature"],
+  "projectType": "library",
+  "targets": {}
+}
