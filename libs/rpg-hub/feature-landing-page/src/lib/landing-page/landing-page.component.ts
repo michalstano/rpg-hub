@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'rh-camera',
+  selector: 'rh-landing-page',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './camera.component.html',
-  styleUrl: './camera.component.scss',
+  templateUrl: './landing-page.component.html',
+  styleUrl: './landing-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FeatureCameraComponent {}
+export class LandingPageComponent {}

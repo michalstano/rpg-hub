@@ -1,1 +1,1 @@
-export * from './lib/feature-camera/camera.component';
+export * from './lib/camera/camera.component';
