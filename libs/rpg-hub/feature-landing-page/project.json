@@ -1,0 +1,9 @@
+{
+  "name": "rpg-hub-feature-landing-page",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/rpg-hub/feature-landing-page/src",
+  "prefix": "rh",
+  "tags": ["scope:rpg-hub", "type:feature"],
+  "projectType": "library",
+  "targets": {}
+}

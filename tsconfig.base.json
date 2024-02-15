@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rpg-hub/feature-camera": ["libs/rpg-hub/feature-camera/src/index.ts"]
+      "@rpg-hub/feature-camera": ["libs/rpg-hub/feature-camera/src/index.ts"],
+      "@rpg-hub/feature-landing-page": [
+        "libs/rpg-hub/feature-landing-page/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
