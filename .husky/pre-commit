@@ -1,1 +1,1 @@
-nx affected:lint
+npm run lint
