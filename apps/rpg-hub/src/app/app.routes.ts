@@ -3,9 +3,9 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: '',
-    loadComponent: () =>
+    loadChildren: () =>
       import('@rpg-hub/feature-landing-page').then(
-        (mod) => mod.LandingPageComponent
+        (mod) => mod.LandingPageRoutes
       ),
   },
 ];
