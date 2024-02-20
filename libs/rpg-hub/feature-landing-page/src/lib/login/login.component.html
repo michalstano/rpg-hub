@@ -1,1 +1,53 @@
-<p>Login</p>
+<h1>Sign in</h1>
+<form [formGroup]="loginGroup" (ngSubmit)="submit()">
+  <span class="input-group">
+    <span class="p-input-icon-left p-float-label">
+      <i class="pi pi-user"></i>
+      <input
+        type="text"
+        id="username"
+        pInputText
+        formControlName="username"
+        aria-describedby="username-error"
+      />
+      <label for="username">Username / e-mail</label>
+    </span>
+    <small
+      id="username-error"
+      [class.visible]="
+        LandingPageUtils.isErrorVisible(loginGroup.controls['username'])
+      "
+      >Username is required.</small
+    >
+  </span>
+  <span class="input-group">
+    <span class="p-input-icon-left p-float-label">
+      <i class="pi pi-lock"></i>
+      <input
+        type="password"
+        id="password"
+        pInputText
+        formControlName="password"
+        aria-describedby="password-error"
+      />
+      <label for="password">Password</label>
+    </span>
+    <small
+      id="password-error"
+      [class.visible]="
+        LandingPageUtils.isErrorVisible(loginGroup.controls['password'])
+      "
+      >Password is required.</small
+    >
+  </span>
+  <p-button type="submit" label="Login"></p-button>
+</form>
+<p>
+  First time here?
+  <p-button
+    label="Sign up"
+    [link]="true"
+    [routerLink]="'/sign-up'"
+    [style]="{ padding: 0 }"
+  ></p-button>
+</p>

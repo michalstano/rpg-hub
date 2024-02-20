@@ -18,6 +18,9 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/rpg-hub/src/favicon.ico", "apps/rpg-hub/src/assets"],
         "styles": ["apps/rpg-hub/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/styles/"]
+       },
         "scripts": []
       },
       "configurations": {
