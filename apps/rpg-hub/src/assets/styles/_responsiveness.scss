@@ -1,0 +1,12 @@
+@import 'variables';
+
+html {
+  font-size: 11pt;
+}
+
+/* Large devices */
+@media (min-width: $large-mq) {
+  html {
+    font-size: 12pt;
+  }
+}
