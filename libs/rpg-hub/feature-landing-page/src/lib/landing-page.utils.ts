@@ -1,12 +1,12 @@
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
-const isErrorVisible = ({ invalid, dirty }: FormControl): boolean => {
+const isErrorVisible = (invalid: boolean, dirty: boolean): boolean => {
   return invalid && dirty;
 };
 
-const markAllAsDirty = (formGroup: FormGroup): void => {
-  Object.keys(formGroup.controls).forEach((key) => {
-    formGroup.controls[key].markAsDirty();
+const markAllAsDirty = ({ controls }: FormGroup): void => {
+  Object.keys(controls).forEach((key) => {
+    controls[key].markAsDirty();
   });
 };
 

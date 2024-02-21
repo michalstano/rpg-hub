@@ -9,13 +9,17 @@
         pInputText
         formControlName="username"
         aria-describedby="username-error"
+        maxlength="40"
       />
       <label for="username">Username / e-mail</label>
     </span>
     <small
       id="username-error"
       [class.visible]="
-        LandingPageUtils.isErrorVisible(loginGroup.controls['username'])
+        LandingPageUtils.isErrorVisible
+          | mapper
+            : loginGroup.controls['username'].invalid
+            : loginGroup.controls['username'].dirty
       "
       >Username is required.</small
     >
@@ -29,13 +33,17 @@
         pInputText
         formControlName="password"
         aria-describedby="password-error"
+        maxlength="40"
       />
       <label for="password">Password</label>
     </span>
     <small
       id="password-error"
       [class.visible]="
-        LandingPageUtils.isErrorVisible(loginGroup.controls['password'])
+        LandingPageUtils.isErrorVisible
+          | mapper
+            : loginGroup.controls['password'].invalid
+            : loginGroup.controls['password'].dirty
       "
       >Password is required.</small
     >
@@ -44,10 +52,7 @@
 </form>
 <p>
   First time here?
-  <p-button
-    label="Sign up"
-    [link]="true"
-    [routerLink]="'/sign-up'"
-    [style]="{ padding: 0 }"
-  ></p-button>
+  <a [routerLink]="'/sign-up'" class="p-button p-button-link sign-up"
+    >Sign up</a
+  >
 </p>
