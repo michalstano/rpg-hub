@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MapperPipe } from '@rpg-hub/shared-utils-mapper';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 
@@ -21,6 +22,7 @@ import { LandingPageUtils } from '../landing-page.utils';
     ButtonModule,
     RouterModule,
     ReactiveFormsModule,
+    MapperPipe,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',

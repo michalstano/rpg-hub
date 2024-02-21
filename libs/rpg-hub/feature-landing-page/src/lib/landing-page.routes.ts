@@ -9,4 +9,8 @@ export const LandingPageRoutes: Route[] = [
     component: LandingPageComponent,
     children: [{ path: '', component: LoginComponent }],
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
